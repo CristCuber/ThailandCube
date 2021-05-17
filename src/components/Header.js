@@ -11,6 +11,10 @@ import { useToggleTheme } from './ThemeProvider/ThemeProvider';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import WbIncandescent from '@material-ui/icons/WbIncandescent';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import CardMedia from '@material-ui/core/CardMedia';
+import THCLogo from './THCLogo.png'
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -28,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  root: {
+    maxWidth: 50,
+  },
 }));
 
 const sections = [
@@ -44,6 +51,14 @@ export default function Header() {
   	return (
   		<React.Fragment>
   			<Toolbar className={classes.toolbar}>
+            <Grid xs={1}>
+              <CardMedia
+                className={classes.root}
+                component="img"
+                image={THCLogo}
+                title="ThailandCubeLogo"
+              />
+            </Grid>
         		<Typography
           			component="h1"
           			variant="h2"

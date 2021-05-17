@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
+   main: {
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 function App() {
@@ -27,7 +30,7 @@ function App() {
   	<ThemeProvider>
   	<React.Fragment>
   	<CssBaseline />
-  	<Container maxWidth="lg">
+  	<Container maxWidth="lg" className={classes.main}>
   		<Header/>
     	<main className="content">
     		<Switch>
@@ -36,7 +39,7 @@ function App() {
     			<Route component={Error} />
     		</Switch>
     	</main>
-    	<Footer className={classes.footer}/>
+      <Footer className={classes.footer}/>
     </Container>
     </React.Fragment>
     </ThemeProvider>

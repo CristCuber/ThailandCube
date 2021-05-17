@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import { Grid, Link, IconButton } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
-import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
@@ -16,9 +14,10 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
   },
   footer: {
-    borderTop: `1px solid ${theme.palette.divider}`,
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
   },
 }));
 
@@ -31,7 +30,7 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <footer className={classes.footer}>
+    <div className={classes.footer}>
       <Grid container spacing={3} >
         <Grid item className={classes.grow} />
           {social.map((network) => (
@@ -58,6 +57,6 @@ export default function Footer() {
       		  </Grid>
           ))}
       </Grid>
-    </footer>
+    </div>
   );
 }
