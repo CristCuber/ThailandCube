@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   toolbarSecondary: {
     justifyContent: 'space-between',
     overflowX: 'auto',
+    borderBottom: `1px solid ${theme.palette.divider}`,
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-	{ title: 'Home', url: '/' },
+    { title: 'Home', url: '/' },
   	{ title: 'เกี่ยวกับเรา', url: '/about' },
   	{ title: 'กิจกรรม', url: '/activity' },
   	{ title: 'แหล่งรวมข้อมูล', url: '/learning' },

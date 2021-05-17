@@ -4,12 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import logo from './logo.svg';
 import './App.css';
-import Home from "./components/Home"
+import Home from "./components/Home/Home"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import About from "./components/About"
+import About from "./components/About/About"
 import Error from "./components/Error"
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
@@ -30,14 +29,14 @@ function App() {
   	<CssBaseline />
   	<Container maxWidth="lg">
   		<Header/>
-    	<main>
+    	<main className="content">
     		<Switch>
     			<Route path="/" component={Home} exact />
     			<Route path="/about" component={About} />
     			<Route component={Error} />
     		</Switch>
     	</main>
-    	<Footer/>
+    	<Footer className={classes.footer}/>
     </Container>
     </React.Fragment>
     </ThemeProvider>
