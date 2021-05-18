@@ -18,31 +18,38 @@ const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
-   main: {
+  main: {
     marginBottom: theme.spacing(2),
+  },
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
   },
 }));
 
 function App() {
-	const classes = useStyles();
+const classes = useStyles();
 
-  return (
-  	<ThemeProvider>
-  	<React.Fragment>
-  	<CssBaseline />
-  	<Container maxWidth="lg" className={classes.main}>
-  		<Header/>
-    	<main className="content">
-    		<Switch>
-    			<Route path="/" component={Home} exact />
-    			<Route path="/about" component={About} />
-    			<Route component={Error} />
-    		</Switch>
-    	</main>
-      <Footer className={classes.footer}/>
-    </Container>
-    </React.Fragment>
+return (
+  <div className={classes.root}>
+    <ThemeProvider>
+      <React.Fragment>
+        <CssBaseline />
+        <Container component="main" maxWidth="lg" className={classes.main}>
+          <Header/>
+          <main className="content">
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/about" component={About} />
+              <Route component={Error} />
+            </Switch>
+          </main>
+        </Container>
+        <Footer className={classes.footer}/>
+      </React.Fragment>
     </ThemeProvider>
+  </div>
   );
 }
 

@@ -28,17 +28,6 @@
   color: #61dafb;
 }
 
-.content {
-  flex: 1 0 auto;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.footer {
-  flex-shrink: 0;
-  text-align: center;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -76,34 +76,34 @@ export default function Header() {
       					/>
       				</IconButton>
       			</Tooltip>
-      		</Toolbar>
-      		<Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-      			 {sections.map((section) => (
-          			<Link
-            			color="inherit"
-            			noWrap
-            			key={section.title}
-            			variant="body2"
-            			href={section.url}
-            			className={classes.toolbarLink}
-          			>
-            			{section.title}
-          			</Link>
-        		))}
-        		<Link
+      	</Toolbar>
+      	<Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+      			{sections.map((section) => (
+          		<Link
             		color="inherit"
             		noWrap
-            		key="forum"
+            		key={section.title}
             		variant="body2"
-            		href="http://www.thailandcube.com/forum/index.php"
-            		target="_blank"
+            		href={section.url}
             		className={classes.toolbarLink}
           		>
-            		Forum
+            		{section.title}
           		</Link>
-      		</Toolbar>
-      	</React.Fragment>
-  	);
+            ))}
+            <Link
+           		color="inherit"
+           		noWrap
+           		key="forum"
+           		variant="body2"
+           		href="http://www.thailandcube.com/forum/index.php"
+            	target="_blank"
+            	className={classes.toolbarLink}
+          	>
+            	Forum
+          	</Link>
+      	</Toolbar>
+    </React.Fragment>
+  );
 }
 
 Header.propTypes = {
