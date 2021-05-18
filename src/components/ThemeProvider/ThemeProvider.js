@@ -23,6 +23,11 @@ const themes = {
         main: grey[900],
       },
     },
+    typography: {
+      fontFamily: [
+        'Kanit',
+      ].join(','),
+    },
   }),
   dark: createMuiTheme({
     palette: {
@@ -33,6 +38,11 @@ const themes = {
       secondary: {
         main: pink['A400'],
       },
+    },
+    typography: {
+      fontFamily: [
+        'Kanit',
+      ].join(','),
     },
   }),
 };

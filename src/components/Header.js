@@ -2,7 +2,6 @@ import React from "react"
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Switch from '@material-ui/core/Switch';
@@ -12,21 +11,18 @@ import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import WbIncandescent from '@material-ui/icons/WbIncandescent';
 import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import CardMedia from '@material-ui/core/CardMedia';
 import THCLogo from './THCLogo.png'
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
   toolbarTitle: {
     flex: 1,
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
     overflowX: 'auto',
-    borderBottom: `1px solid ${theme.palette.divider}`,
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -38,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-    { title: 'Home', url: '/' },
-  	{ title: 'เกี่ยวกับเรา', url: '/about' },
-  	{ title: 'กิจกรรม', url: '/activity' },
-  	{ title: 'แหล่งรวมข้อมูล', url: '/learning' },
+    { title: 'Home', url: '/', out: 'no' ,},
+  	{ title: 'เกี่ยวกับเรา', url: '/about', out: 'no',},
+  	{ title: 'กิจกรรม', url: '/activity', out: 'no',},
+  	{ title: 'แหล่งข้อมูล', url: '/learning', out: 'no',},
 ];
 
 export default function Header() {
@@ -50,7 +46,7 @@ export default function Header() {
 
   	return (
   		<React.Fragment>
-  			<Toolbar className={classes.toolbar}>
+  			<Toolbar >
             <Grid xs={1}>
               <CardMedia
                 className={classes.root}
@@ -77,9 +73,10 @@ export default function Header() {
       				</IconButton>
       			</Tooltip>
       	</Toolbar>
+        <Divider />
       	<Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
       			{sections.map((section) => (
-          		<Link
+          		<Button 
             		color="inherit"
             		noWrap
             		key={section.title}
@@ -88,9 +85,9 @@ export default function Header() {
             		className={classes.toolbarLink}
           		>
             		{section.title}
-          		</Link>
+          		</Button >
             ))}
-            <Link
+            <Button 
            		color="inherit"
            		noWrap
            		key="forum"
@@ -100,8 +97,9 @@ export default function Header() {
             	className={classes.toolbarLink}
           	>
             	Forum
-          	</Link>
+          	</Button >
       	</Toolbar>
+        <Divider />
     </React.Fragment>
   );
 }
