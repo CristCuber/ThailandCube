@@ -6,13 +6,11 @@ import Error from "./Error"
 
 function Main() {
   return (
-    <main>
       <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route component={Error} />
+        <Route exact path="/"><Home/></Route>
+        <Route path="/about"><About/></Route>
+        <Route ><Error/></Route>
       </Switch>
-    </main>
 	);
 }
 

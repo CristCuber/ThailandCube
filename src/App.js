@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter , Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
@@ -26,24 +26,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function App() {
+const App = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <ThemeProvider>
-        <React.Fragment>
-          <CssBaseline />
-          <Container component="main" maxWidth="lg" className={classes.main}>
-            <Header/>
-            <BrowserRouter basename="/thailandcube">
-              <Main/>
-            </BrowserRouter >
-          </Container>
-          <Footer className={classes.footer}/>
-        </React.Fragment>
-      </ThemeProvider>
-    </div>
+    <BrowserRouter basename="/thailandcube">
+      <div className={classes.root}>
+        <ThemeProvider>
+          <React.Fragment>
+            <CssBaseline />
+            <Container component="main" maxWidth="lg" className={classes.main}>
+              <Header/>
+                <Main/>
+            </Container>
+            <Footer className={classes.footer}/>
+          </React.Fragment>
+        </ThemeProvider>
+      </div>
+    </BrowserRouter >
   );
 }
 

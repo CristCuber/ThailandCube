@@ -1,19 +1,16 @@
 import React from "react"
-import { BrowserRouter , Link } from 'react-router-dom';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { useToggleTheme } from './ThemeProvider/ThemeProvider';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import WbIncandescent from '@material-ui/icons/WbIncandescent';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
-import Container from '@material-ui/core/Container';
 import CardMedia from '@material-ui/core/CardMedia';
 import THCLogo from './THCLogo.png'
 
@@ -82,7 +79,8 @@ export default function Header() {
             		noWrap
             		key={section.title}
             		variant="body2"
-            		href={section.url}
+            		component={Link} 
+                to={section.url}
             		className={classes.toolbarLink}
           		>
             		{section.title}
