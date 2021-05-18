@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
@@ -38,13 +38,13 @@ return (
         <CssBaseline />
         <Container component="main" maxWidth="lg" className={classes.main}>
           <Header/>
-          <main className="content">
+          <BrowserRouter basename="/thailandcube" className="content">
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/about" component={About} />
               <Route component={Error} />
             </Switch>
-          </main>
+          </BrowserRouter >
         </Container>
         <Footer className={classes.footer}/>
       </React.Fragment>
