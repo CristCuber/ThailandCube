@@ -17,8 +17,6 @@ import THCLogo from './THCLogo.png'
 const useStyles = makeStyles((theme) => ({
   toolbarTitle: {
     flex: 1,
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
