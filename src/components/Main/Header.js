@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { useToggleTheme } from './ThemeProvider/ThemeProvider';
+import { useToggleTheme } from '../ThemeProvider/ThemeProvider';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import WbIncandescent from '@material-ui/icons/WbIncandescent';

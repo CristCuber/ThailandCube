@@ -11,7 +11,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Container from '@material-ui/core/Container';
 import Hidden from '@material-ui/core/Hidden';
-import Banner from '../Banner';
+import Banner from '../Banner/Banner';
 
 const useStyles = makeStyles((theme) => ({
   boxText: {
@@ -72,35 +72,35 @@ function About() {
 
 	return (
 		<about>
-        <Banner title={bannertitle}/>
-        <Card className={classes.boxText}>
-          <Typography component="h1" variant="h4" align="center" color="primary" gutterBottom>
-            {speedCubing.title}
-          </Typography>
-          <Container maxWidth="lg">
-            {speedCubing.paragraph.map((text) => (
-              <Typography component="h1" variant="subtitle1" align="center" gutterBottom>
-                {text.detail}
-              </Typography>
-            ))}
-          </Container>
-        </Card>
-        <div className={classes.cardGrid} alignContent="center">
-         	<Grid container spacing={2} >
-         		{imageTop.map((pic) => (
-         			<Grid item md={6}>
-         				<Card className={classes.card}>
-         					<CardMedia
-								    component="img"
-          					image={pic.image}
-          					title={pic.title}
-        					/>
-         				</Card>
-         			</Grid>
-         		))}
-         	</Grid>
-        </div>
-        <Grid item xs={12} md={12}>
+      <Banner title={bannertitle}/>
+      <Card className={classes.boxText}>
+        <Typography component="h1" variant="h4" align="center" color="primary" gutterBottom>
+          {speedCubing.title}
+        </Typography>
+        <Container maxWidth="lg">
+          {speedCubing.paragraph.map((text) => (
+            <Typography component="h1" variant="subtitle1" align="center" gutterBottom>
+              {text.detail}
+            </Typography>
+          ))}
+        </Container>
+      </Card>
+      <div className={classes.cardGrid} alignContent="center">
+        <Grid container spacing={2} >
+         	{imageTop.map((pic) => (
+         		<Grid item md={6}>
+         			<Card className={classes.card}>
+        				<CardMedia
+								  component="img"
+          				image={pic.image}
+          				title={pic.title}
+        				/>
+         			</Card>
+         		</Grid>
+         	))}
+        </Grid>
+     </div>
+      <Grid item xs={12} md={12}>
         <Card className={classes.card2}>
           <div className={classes.cardDetails}>
             <CardContent>
@@ -112,7 +112,7 @@ function About() {
                   <Typography component="h1" variant="subtitle1" align="center" gutterBottom>
                     {text.detail}
                   </Typography>
-                ))}  
+               ))}  
               </Container>
             </CardContent>
           </div>
@@ -123,9 +123,9 @@ function About() {
               title="Image3" 
             />
           </Hidden>
-            </Card>
-        </Grid>
-  		</about>
+        </Card>
+      </Grid>
+  	</about>
 	);
 }
 

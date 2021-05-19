@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import './App.css';
-import Header from "./components/Header"
-import Main from './components/Main';
-import Footer from "./components/Footer"
+import Header from "./components/Main/Header"
+import Main from './components/Main/Main';
+import Footer from "./components/Main/Footer"
 import { ThemeProvider } from './components/ThemeProvider/ThemeProvider';
 
 const useStyles = makeStyles((theme) => ({

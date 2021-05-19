@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    //height: '250px',
   },
   overlay: {
     position: 'absolute',
@@ -20,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: 'rgba(0,0,150,.3)',
+    backgroundColor: 'rgba(0,0,100,.7)',
   },
   TitleText: {
     position: 'relative',
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(5),
+      padding: theme.spacing(10),
       paddingRight: 5,
     },
   },
