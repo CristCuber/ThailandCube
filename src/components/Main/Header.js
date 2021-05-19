@@ -32,10 +32,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-    { title: 'Home', url: '/', out: 'no' ,},
-  	{ title: 'เกี่ยวกับเรา', url: '/about', out: 'no',},
-  	{ title: 'กิจกรรม', url: '/activity', out: 'no',},
-  	{ title: 'แหล่งข้อมูล', url: '/learning', out: 'no',},
+    { title: 'Home', url: '/',},
+  	{ title: 'เกี่ยวกับเรา', url: '/about',},
+  	{ title: 'กิจกรรม', url: '/activity',},
+  	{ title: 'แหล่งข้อมูล', url: '/learning',},
+    { title: 'สถิติ', url: '/statistic',},
 ];
 
 export default function Header() {
