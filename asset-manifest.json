@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/thailandcube/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/thailandcube/static/js/main.6dd91ad9.chunk.js",
+    "main.js.map": "/thailandcube/static/js/main.6dd91ad9.chunk.js.map",
+    "runtime-main.js": "/thailandcube/static/js/runtime-main.a18ba9cf.js",
+    "runtime-main.js.map": "/thailandcube/static/js/runtime-main.a18ba9cf.js.map",
+    "static/js/2.cee4dd85.chunk.js": "/thailandcube/static/js/2.cee4dd85.chunk.js",
+    "static/js/2.cee4dd85.chunk.js.map": "/thailandcube/static/js/2.cee4dd85.chunk.js.map",
+    "index.html": "/thailandcube/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/thailandcube/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.cee4dd85.chunk.js.LICENSE.txt": "/thailandcube/static/js/2.cee4dd85.chunk.js.LICENSE.txt",
+    "static/media/AboutTitle.fe803344.jpg": "/thailandcube/static/media/AboutTitle.fe803344.jpg",
+    "static/media/ActivityTitle.ec213817.jpg": "/thailandcube/static/media/ActivityTitle.ec213817.jpg",
+    "static/media/Image1.01d87210.jpg": "/thailandcube/static/media/Image1.01d87210.jpg",
+    "static/media/Image2.6b43b1c8.jpg": "/thailandcube/static/media/Image2.6b43b1c8.jpg",
+    "static/media/Image3.a5a833ec.jpg": "/thailandcube/static/media/Image3.a5a833ec.jpg",
+    "static/media/THCBanner.a9d17df6.png": "/thailandcube/static/media/THCBanner.a9d17df6.png",
+    "static/media/THCLogo.bbe038a9.png": "/thailandcube/static/media/THCLogo.bbe038a9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a18ba9cf.js",
+    "static/js/2.cee4dd85.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.6dd91ad9.chunk.js"
+  ]
+}
