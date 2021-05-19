@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(10),
-      paddingRight: 5,
     },
   },
 }));
