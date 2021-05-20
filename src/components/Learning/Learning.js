@@ -2,6 +2,7 @@ import React from "react";
 import TitleImg from "./LearningTitle.jpg";
 import { makeStyles } from '@material-ui/core/styles';
 import Banner from '../Banner/Banner';
+import UnderConst from '../UnderConst/UnderConst';
 
 const bannertitle = {
   text: 'แหล่งข้อมูล',
@@ -10,9 +11,10 @@ const bannertitle = {
 
 function Learning() {
 	return (
-		<activity>
+		<learning>
         	<Banner title={bannertitle}/>
-  		</activity>
+        	<UnderConst/>
+  		</learning>
 	);
 }
 
