@@ -16,6 +16,7 @@ import UpcomingWCAComp from './UpcomingWCAComp';
 import PastWCAComp from './PastWCAComp';
 import UpcomingEvent from './UpcomingEvent';
 import PastEvent from './PastEvent';
+import Link from '@material-ui/core/Link';
 
 const bannertitle = {
   text: 'กิจกรรม',
@@ -29,7 +30,7 @@ const styles = theme => ({
   },
   cardGrid: {
     paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(8),
+    paddingBottom: theme.spacing(3),
   },
   card: {
       height: '100%',
@@ -113,7 +114,7 @@ class Activity extends Component {
         <Grid item xs={12} className={classes.firstCard}>
           <Card className={classes.card}>
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant="h5" component="h2">
                 <b>{UpcomingWCAComp.name}</b>
               </Typography>
               <Typography gutterBottom >
@@ -156,7 +157,7 @@ class Activity extends Component {
           <Grid item xs={12}>
             <Card className={classes.card}>
               <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h4" component="h2">
+                <Typography gutterBottom variant="h5" component="h2">
                   <b>{comp.name}</b>
                 </Typography>
                 <Typography gutterBottom >
@@ -199,7 +200,7 @@ class Activity extends Component {
         <Grid item xs={12} className={classes.firstCard}>
           <Card className={classes.card}>
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant="h5" component="h2">
                 <b>{UpcomingEvent.name}</b>
               </Typography>
               <Typography gutterBottom >
@@ -242,7 +243,7 @@ class Activity extends Component {
           <Grid item xs={12}>
             <Card className={classes.card}>
               <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h4" component="h2">
+                <Typography gutterBottom variant="h5" component="h2">
                   <b>{event.name}</b>
                 </Typography>
                 <Typography gutterBottom >
@@ -286,6 +287,17 @@ class Activity extends Component {
                   <Grid container spacing={4}>
                     {pastWCA}
                   </Grid>
+                  <Typography gutterBottom variant="body1" component="h2" align="left" className={classes.pastText}>
+                    ค้นหาการแข่งขัน WCA เพิ่มเติมได้
+                      <b>
+                        <Link 
+                          href="https://www.worldcubeassociation.org/competitions" 
+                          target="_blank"
+                        >
+                          ที่นี่
+                        </Link>
+                      </b>
+                  </Typography>
                 </Grid>
                 <Grid item xs={6} spacing={3}>
                   <Typography gutterBottom variant="h4" component="h2" align="center">
